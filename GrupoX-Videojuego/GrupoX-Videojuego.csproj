@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>GrupoX_Videojuego</RootNamespace>
+    <AssemblyName>GrupoX-Videojuego</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="PhysicsValidator\**" />
+    <EmbeddedResource Remove="PhysicsValidator\**" />
+    <None Remove="PhysicsValidator\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Sounds\*.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+</Project>
